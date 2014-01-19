@@ -11,27 +11,20 @@
 @interface TestStatsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *colorfulCharactersLable;
 @property (weak, nonatomic) IBOutlet UILabel *outlinedCharacterLable;
+
 @end
 
 @implementation TestStatsViewController
 
--(void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    self.textToAnalyze = [[NSAttributedString alloc] initWithString:@"test"
-                                                         attributes:@{NSForegroundColorAttributeName : [UIColor grayColor],
-                                                                      NSStrokeWidthAttributeName : @3}];
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
+    [super viewWillAppear:animated];
     [self updateUI];
 }
 -(void)setTextToAnalyze:(NSAttributedString *)textToAnalyze
 {
     _textToAnalyze = textToAnalyze;
-    [self updateUI];
+    if(self.view.window) [self updateUI];
 }
 -(NSAttributedString *)characterWithAttribute:(NSString *)attributeName
 {
@@ -51,9 +44,7 @@
 }
 -(void)updateUI
 {
-    self.colorfulCharactersLable.text = [NSString stringWithFormat:@"%d colorful characters",
-                                         [[self characterWithAttribute:NSForegroundColorAttributeName] length]];
-    self.outlinedCharacterLable.text = [NSString stringWithFormat:@"%d outlined characters",
-                                         [[self characterWithAttribute:NSStrokeWidthAttributeName] length]];
+    self.colorfulCharactersLable.text = [NSString stringWithFormat:@"%d colorful characters",[[self characterWithAttribute:NSForegroundColorAttributeName] length]];
+    self.outlinedCharacterLable.text = [NSString stringWithFormat:@"%d outlined characters",[[self characterWithAttribute:NSStrokeWidthAttributeName] length]];
 }
 @end

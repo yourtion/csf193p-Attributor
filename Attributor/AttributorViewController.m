@@ -7,6 +7,7 @@
 //
 
 #import "AttributorViewController.h"
+#import "TestStatsViewController.h"
 
 @interface AttributorViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *headline;
@@ -15,6 +16,17 @@
 @end
 
 @implementation AttributorViewController
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AnalyzeTest"]) {
+        if ([segue.destinationViewController isKindOfClass:[TestStatsViewController class]]) {
+            TestStatsViewController *tsvc = (TestStatsViewController *)segue.destinationViewController;
+            tsvc.textToAnalyze = self.body.textStorage;
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
