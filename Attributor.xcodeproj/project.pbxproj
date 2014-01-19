@@ -21,6 +21,7 @@
 		CBE58B31188BB817003B81D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE58B13188BB817003B81D2 /* UIKit.framework */; };
 		CBE58B39188BB817003B81D2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBE58B37188BB817003B81D2 /* InfoPlist.strings */; };
 		CBE58B3B188BB817003B81D2 /* AttributorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE58B3A188BB817003B81D2 /* AttributorTests.m */; };
+		CBE58B46188C0592003B81D2 /* TestStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE58B45188C0592003B81D2 /* TestStatsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		CBE58B36188BB817003B81D2 /* AttributorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AttributorTests-Info.plist"; sourceTree = "<group>"; };
 		CBE58B38188BB817003B81D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBE58B3A188BB817003B81D2 /* AttributorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributorTests.m; sourceTree = "<group>"; };
+		CBE58B44188C0592003B81D2 /* TestStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestStatsViewController.h; sourceTree = "<group>"; };
+		CBE58B45188C0592003B81D2 /* TestStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestStatsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				CBE58B25188BB817003B81D2 /* AttributorViewController.m */,
 				CBE58B27188BB817003B81D2 /* Images.xcassets */,
 				CBE58B16188BB817003B81D2 /* Supporting Files */,
+				CBE58B44188C0592003B81D2 /* TestStatsViewController.h */,
+				CBE58B45188C0592003B81D2 /* TestStatsViewController.m */,
 			);
 			path = Attributor;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			files = (
 				CBE58B20188BB817003B81D2 /* AttributorAppDelegate.m in Sources */,
 				CBE58B26188BB817003B81D2 /* AttributorViewController.m in Sources */,
+				CBE58B46188C0592003B81D2 /* TestStatsViewController.m in Sources */,
 				CBE58B1C188BB817003B81D2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
